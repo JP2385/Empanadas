@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force light color scheme */
+:root {
+  color-scheme: light only;
+}
+
 @layer base {
   html {
     -webkit-overflow-scrolling: touch;
     background-color: #FFFFFF;
     height: 100%;
     overflow: auto;
+    color-scheme: light only;
   }
 
   body {
@@ -31,6 +37,33 @@
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+  }
+
+  /* Prevent any darkening overlay effects on mobile */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body, html, #root {
+      background: #FFFFFF !important;
+    }
+
+    /* Prevent Chrome auto-darkening */
+    body::before,
+    body::after,
+    #root::before,
+    #root::after {
+      display: none !important;
+    }
+  }
+
+  /* Prevent dark mode from being applied */
+  @media (prefers-color-scheme: dark) {
+    html, body, #root {
+      background-color: #FFFFFF !important;
+      color-scheme: light only !important;
+    }
   }
 
   h1 {
