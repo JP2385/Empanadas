@@ -1,23 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { getAssetPath } from '../config'
 
 const Navbar = ({ openLocationModal }) => {
-  const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -36,14 +22,8 @@ const Navbar = ({ openLocationModal }) => {
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white shadow-md'
-            : 'bg-white/95 backdrop-blur-sm'
-        }`}
-        style={{ position: 'fixed', top: 0 }}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md">
+
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Hamburger Menu Button - Mobile Only */}

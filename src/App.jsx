@@ -16,17 +16,19 @@ function App() {
   const closeLocationModal = () => setIsLocationModalOpen(false)
 
   return (
-    <div className="min-h-screen">
+    <>
       <Navbar openLocationModal={openLocationModal} />
-      <Hero openLocationModal={openLocationModal} />
-      <AboutUs />
-      <OrderOnline openLocationModal={openLocationModal} />
-      <Menu openLocationModal={openLocationModal} />
-      <Locations />
-      <InstagramFeed />
-      <Footer openLocationModal={openLocationModal} />
+      <div style={{ paddingTop: '64px' }}>
+        <Hero openLocationModal={openLocationModal} />
+        <AboutUs />
+        <OrderOnline openLocationModal={openLocationModal} />
+        <Menu openLocationModal={openLocationModal} />
+        <Locations />
+        <InstagramFeed />
+        <Footer openLocationModal={openLocationModal} />
+      </div>
       <LocationModal isOpen={isLocationModalOpen} onClose={closeLocationModal} />
-    </div>
+    </>
   )
 }
 

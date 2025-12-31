@@ -4,30 +4,33 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     background-color: #FFFFFF;
-    min-height: 100%;
+    height: 100%;
+    overflow: auto;
   }
 
   body {
     @apply font-sans text-primary-dark antialiased;
-    position: relative;
-    min-height: 100vh;
     background-color: #FFFFFF;
     overscroll-behavior-y: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
   }
 
   #root {
     background-color: #FFFFFF;
-    min-height: 100vh;
+    min-height: 100%;
   }
 
-  /* Ensure fixed navbar stays fixed on mobile */
-  nav[class*="fixed"] {
-    position: fixed !important;
-    top: 0 !important;
-    width: 100%;
+  /* Fix navbar on mobile to prevent viewport resize affecting it */
+  nav {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   h1 {
