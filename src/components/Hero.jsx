@@ -10,12 +10,15 @@ const Hero = ({ openLocationModal }) => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute w-full h-full"
+          className="absolute w-full h-full bg-teal-600"
           style={{
             backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'scroll',
+            willChange: 'auto',
+            transform: 'translateZ(0)',
           }}
         />
       </div>

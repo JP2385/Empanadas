@@ -6,9 +6,12 @@ const OrderOnline = ({ openLocationModal }) => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-teal-600"
           style={{
             backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
+            backgroundAttachment: 'scroll',
+            willChange: 'auto',
+            transform: 'translateZ(0)',
           }}
         />
       </div>
