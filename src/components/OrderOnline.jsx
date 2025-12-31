@@ -1,28 +1,14 @@
-import { useState, useEffect } from 'react'
 import { getAssetPath } from '../config'
 
 const OrderOnline = ({ openLocationModal }) => {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <section id="order" className="relative section-padding overflow-hidden">
-      {/* Parallax Background */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 w-full h-[120%] bg-cover bg-center"
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
-            transform: `translateY(${(scrollY - 1000) * 0.3}px)`,
-            willChange: 'transform',
           }}
         />
         <div className="absolute inset-0 bg-black/15"></div>
