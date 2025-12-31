@@ -37,9 +37,6 @@ const Hero = ({ openLocationModal }) => {
           />
         </div>
 
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow tracking-wide">
-          ALWAYS FROM SCRATCH
-        </h1>
         <p className="text-lg md:text-xl lg:text-2xl text-white mb-6 text-shadow max-w-2xl mx-auto">
           Authentic Argentine Empanadas Made Fresh Daily
         </p>
