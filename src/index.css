@@ -56,6 +56,19 @@
     #root::after {
       display: none !important;
     }
+
+    /* Disable transforms and effects that may cause rendering issues on Chrome mobile */
+    * {
+      will-change: auto !important;
+      transform: none !important;
+      -webkit-transform: none !important;
+    }
+
+    /* Re-enable only necessary transforms */
+    nav {
+      transform: translateZ(0) !important;
+      -webkit-transform: translateZ(0) !important;
+    }
   }
 
   /* Prevent dark mode from being applied */
