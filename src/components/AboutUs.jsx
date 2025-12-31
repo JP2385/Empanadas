@@ -52,9 +52,6 @@ const AboutUs = () => {
                 loading="lazy"
               />
             </div>
-            {/* Decorative Element */}
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-teal-500 opacity-20 rounded-full blur-2xl"></div>
-            <div className="absolute -top-6 -right-6 w-40 h-40 bg-teal-300 opacity-20 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Footer = ({ openLocationModal }) => {
   return (
     <footer id="contact" className="bg-footer text-white py-12">
       <div className="container-custom">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link
