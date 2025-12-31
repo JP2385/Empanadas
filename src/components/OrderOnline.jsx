@@ -25,6 +25,7 @@ const OrderOnline = ({ openLocationModal }) => {
             willChange: 'transform',
           }}
         />
+        <div className="absolute inset-0 bg-black/15"></div>
       </div>
 
       {/* Content */}

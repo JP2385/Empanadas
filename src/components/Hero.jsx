@@ -21,8 +21,6 @@ const Hero = ({ openLocationModal }) => {
     >
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 z-0">
-        {/* Gradient Background as fallback */}
-        <div className="absolute inset-0 bg-gradient-to-br from-teal-700 via-teal-600 to-teal-500"></div>
         <div
           className="absolute w-full h-full"
           style={{
@@ -38,7 +36,7 @@ const Hero = ({ openLocationModal }) => {
             willChange: 'transform',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-teal-900/40 to-black/30"></div>
+        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
