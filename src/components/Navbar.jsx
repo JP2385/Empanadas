@@ -99,7 +99,7 @@ const Navbar = ({ openLocationModal }) => {
           ></div>
 
           {/* Menu Panel */}
-          <div className="absolute left-0 top-0 bottom-0 w-80 bg-white shadow-2xl transform transition-transform duration-300 translate-x-0">
+          <div className="absolute left-0 top-0 bottom-0 w-80 bg-white shadow-2xl transform transition-transform duration-300 translate-x-0 z-10">
           {/* Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-100">
             <div className="flex items-center">

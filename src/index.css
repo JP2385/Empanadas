@@ -58,13 +58,13 @@
     }
 
     /* Disable transforms and effects that may cause rendering issues on Chrome mobile */
-    * {
+    *:not(nav):not(nav *) {
       will-change: auto !important;
       transform: none !important;
       -webkit-transform: none !important;
     }
 
-    /* Re-enable only necessary transforms */
+    /* Keep navbar transforms working */
     nav {
       transform: translateZ(0) !important;
       -webkit-transform: translateZ(0) !important;
@@ -96,7 +96,7 @@
   .btn-primary {
     @apply px-8 py-3 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-lg
            hover:from-teal-600 hover:to-teal-700 transition-all duration-300
-           transform hover:scale-105 shadow-lg hover:shadow-2xl hover:shadow-teal-500/50;
+           transform hover:scale-105;
   }
 
   .btn-secondary {

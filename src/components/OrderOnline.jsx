@@ -28,8 +28,7 @@ const OrderOnline = ({ openLocationModal }) => {
           <button
             onClick={openLocationModal}
             className="inline-block px-12 py-4 bg-white text-teal-600 font-bold text-lg rounded-lg
-                     hover:bg-cream hover:shadow-teal-300/50 transition-all duration-300 transform hover:scale-105
-                     shadow-2xl hover:shadow-3xl"
+                     hover:bg-cream transition-all duration-300 transform hover:scale-105"
           >
             ORDER NOW
           </button>
