@@ -11,7 +11,6 @@ const OrderOnline = ({ openLocationModal }) => {
             backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
           }}
         />
-        <div className="absolute inset-0 bg-black/15"></div>
       </div>
 
       {/* Content */}

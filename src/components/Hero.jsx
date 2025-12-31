@@ -1,42 +1,23 @@
-import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
 import { getAssetPath } from '../config'
 
 const Hero = ({ openLocationModal }) => {
-  const [scrollY, setScrollY] = useState(0)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <section
       id="hero"
       className="relative h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Parallax Effect */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <div
           className="absolute w-full h-full"
           style={{
-            top: '-10%',
-            left: 0,
-            right: 0,
-            height: '120%',
             backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
-            transform: `translateY(${scrollY * 0.3}px)`,
-            willChange: 'transform',
           }}
         />
-        <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
       {/* Content */}
