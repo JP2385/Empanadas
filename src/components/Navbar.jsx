@@ -15,10 +15,10 @@ const Navbar = ({ openLocationModal }) => {
 
   const navLinks = [
     { name: 'MENU', to: 'menu' },
-    { name: 'LOCATIONS', to: 'locations' },
+    { name: 'CATERING', to: 'catering' },
     { name: 'ABOUT US', to: 'about' },
-    { name: 'CONTACT', to: 'contact' },
-    { name: 'CATERING', to: 'catering' }
+    { name: 'LOCATIONS', to: 'locations' },
+    { name: 'CONTACT', to: 'contact' }
   ]
 
   return (
@@ -71,6 +71,12 @@ const Navbar = ({ openLocationModal }) => {
                   {link.name}
                 </a>
               ))}
+              <button
+                onClick={openLocationModal}
+                className="px-6 py-2 bg-[#10b5cb] text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all"
+              >
+                Order Now
+              </button>
             </div>
 
             {/* Empty space for symmetry - Mobile only */}
