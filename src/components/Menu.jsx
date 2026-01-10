@@ -8,9 +8,6 @@ const Menu = ({ openLocationModal }) => {
           <h2 className="heading-lg text-primary-dark mb-3 tracking-wider">
             MENU
           </h2>
-          <p className="text-body text-gray-600 max-w-2xl mx-auto">
-            Explore our delicious selection of handmade empanadas, crafted with authentic Argentine recipes
-          </p>
         </div>
 
         {/* Menu Image */}
@@ -24,15 +21,6 @@ const Menu = ({ openLocationModal }) => {
             />
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center">
-            <button
-              onClick={openLocationModal}
-              className="btn-primary text-lg"
-            >
-              ORDER NOW
-            </button>
-          </div>
         </div>
       </div>
     </section>

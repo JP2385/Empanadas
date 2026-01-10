@@ -46,8 +46,8 @@ const AboutUs = () => {
                 className="absolute top-8 right-8 w-20 h-20 z-10 animate-bounce opacity-90"
               />
               <img
-                src={getAssetPath('images/backgrounds/indoor.jpg')}
-                alt="Milonga Empanadas restaurant interior"
+                src={getAssetPath('images/backgrounds/our-story.jpg')}
+                alt="Our Story - Milonga Empanadas"
                 className="w-full h-[500px] object-cover transform hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />

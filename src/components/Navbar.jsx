@@ -14,10 +14,11 @@ const Navbar = ({ openLocationModal }) => {
   }
 
   const navLinks = [
-    { name: 'ABOUT US', to: 'about' },
     { name: 'MENU', to: 'menu' },
     { name: 'LOCATIONS', to: 'locations' },
-    { name: 'CONTACT', to: 'contact' }
+    { name: 'ABOUT US', to: 'about' },
+    { name: 'CONTACT', to: 'contact' },
+    { name: 'CATERING', to: 'catering' }
   ]
 
   return (
@@ -70,12 +71,6 @@ const Navbar = ({ openLocationModal }) => {
                   {link.name}
                 </a>
               ))}
-              <button
-                onClick={openLocationModal}
-                className="px-6 py-2 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-teal-700 transition-all"
-              >
-                ORDER NOW
-              </button>
             </div>
 
             {/* Empty space for symmetry - Mobile only */}
@@ -127,6 +122,17 @@ const Navbar = ({ openLocationModal }) => {
 
           {/* Menu Items */}
           <div className="p-6 space-y-2">
+            {/* ORDER NOW Button */}
+            <button
+              onClick={() => {
+                closeMenu()
+                openLocationModal()
+              }}
+              className="w-full py-4 px-4 text-lg font-bold bg-[#10b5cb] text-white hover:bg-opacity-90 rounded-lg transition-all mb-4"
+            >
+              ORDER NOW
+            </button>
+            
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -137,17 +143,6 @@ const Navbar = ({ openLocationModal }) => {
                 {link.name}
               </a>
             ))}
-
-            {/* ORDER NOW Button */}
-            <button
-              onClick={() => {
-                closeMenu()
-                openLocationModal()
-              }}
-              className="w-full py-4 px-4 text-lg font-bold bg-gradient-to-r from-teal-500 to-teal-600 text-white hover:from-teal-600 hover:to-teal-700 rounded-lg transition-all"
-            >
-              ORDER NOW
-            </button>
           </div>
 
           {/* Menu Footer */}

@@ -12,7 +12,7 @@ const Hero = ({ openLocationModal }) => {
         <div
           className="absolute w-full h-full bg-teal-600"
           style={{
-            backgroundImage: `url(${getAssetPath('images/backgrounds/order-online-bg.jpg')})`,
+            backgroundImage: `url(${getAssetPath('images/backgrounds/hero-empanadas.jpg')})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center center',
             backgroundRepeat: 'no-repeat',
@@ -37,9 +37,6 @@ const Hero = ({ openLocationModal }) => {
           />
         </div>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-white mb-6 text-shadow max-w-2xl mx-auto">
-          Authentic Argentine Empanadas Made Fresh Daily
-        </p>
         <button
           onClick={openLocationModal}
           className="btn-primary text-base md:text-lg cursor-pointer"
