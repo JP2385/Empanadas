@@ -15,7 +15,6 @@
     height: 100%;
     overflow: auto;
     color-scheme: light only;
-    scroll-behavior: smooth;
     scroll-padding-top: 120px;
   }
 
@@ -67,17 +66,9 @@
       display: none !important;
     }
 
-    /* Disable transforms and effects that may cause rendering issues on Chrome mobile */
-    *:not(nav):not(nav *) {
+    /* Reduce GPU overhead on mobile but keep transforms/animations working */
+    * {
       will-change: auto !important;
-      transform: none !important;
-      -webkit-transform: none !important;
-    }
-
-    /* Keep navbar transforms working */
-    nav {
-      transform: translateZ(0) !important;
-      -webkit-transform: translateZ(0) !important;
     }
   }
 

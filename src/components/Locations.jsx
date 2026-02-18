@@ -5,7 +5,6 @@ import { getAssetPath } from '../config'
 const getPacificTime = () => {
   const now = new Date()
   // Convert to Pacific Time using Intl API
-  const options = { timeZone: 'America/Los_Angeles', hour12: false, weekday: 'short', hour: 'numeric', minute: 'numeric' }
   const parts = new Intl.DateTimeFormat('en-US', {
     timeZone: 'America/Los_Angeles',
     weekday: 'short',

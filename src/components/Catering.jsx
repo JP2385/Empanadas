@@ -49,6 +49,7 @@ export default function Catering() {
 
       if (response.ok) {
         setSubmitted(true);
+        setIsLoading(false);
         setFormData({
           fullName: '',
           email: '',
@@ -59,10 +60,15 @@ export default function Catering() {
           details: '',
         });
         setTimeout(() => setSubmitted(false), 2000);
+      } else {
+        setError(true);
+        setIsLoading(false);
+        setTimeout(() => setError(false), 3000);
       }
     } catch (err) {
       console.error('Error:', err);
       setError(true);
+      setIsLoading(false);
       setTimeout(() => setError(false), 3000);
     }
   };
